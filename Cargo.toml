@@ -1,0 +1,22 @@
+[package]
+name = "kernel_extractor"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[dependencies]
+log = "0.4"
+env_logger = "0.9"
+chrono = "0.4.22"
+colored = "2.0.0"
+libc = "0.2.134"
+nix = "0.25"
+flate2 = "1.0"
